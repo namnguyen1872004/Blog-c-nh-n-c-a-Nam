@@ -129,8 +129,6 @@
         justify-content: center;
         padding-top: 60px;
       }
-
-      /* Sky gradient */
       .sky {
         position: absolute;
         inset: 0;
@@ -144,16 +142,12 @@
           #091830 100%
         );
       }
-
-      /* Stars canvas */
       #starCanvas {
         position: absolute;
         inset: 0;
         z-index: 1;
         pointer-events: none;
       }
-
-      /* Shooting stars */
       .shoot {
         position: absolute;
         z-index: 2;
@@ -186,8 +180,6 @@
           transform: translate(400px, 200px) rotate(-35deg);
         }
       }
-
-      /* Nebula */
       .neb {
         position: absolute;
         border-radius: 50%;
@@ -204,8 +196,6 @@
           transform: translate(15px, -15px);
         }
       }
-
-      /* Mountains silhouette */
       .mountains {
         position: absolute;
         bottom: 0;
@@ -214,8 +204,6 @@
         z-index: 4;
         pointer-events: none;
       }
-
-      /* Planet */
       .planet-outer {
         position: absolute;
         bottom: -180px;
@@ -255,8 +243,6 @@
             0 0 160px rgba(56, 189, 248, 0.2);
         }
       }
-
-      /* Planet surface details */
       .planet::before {
         content: "";
         position: absolute;
@@ -279,13 +265,10 @@
         background: rgba(20, 50, 100, 0.4);
         filter: blur(8px);
       }
-
-      /* Planet atmosphere glow */
       .planet-atm {
         position: absolute;
         inset: -8px;
         border-radius: 50%;
-        background: transparent;
         border: 8px solid rgba(56, 189, 248, 0.15);
         filter: blur(4px);
       }
@@ -293,12 +276,9 @@
         position: absolute;
         inset: -20px;
         border-radius: 50%;
-        background: transparent;
         border: 4px solid rgba(56, 189, 248, 0.07);
         filter: blur(8px);
       }
-
-      /* Planet ring */
       .planet-ring {
         position: absolute;
         top: 50%;
@@ -311,8 +291,6 @@
         box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
         pointer-events: none;
       }
-
-      /* Asteroids */
       @keyframes asteroidFloat {
         0%,
         100% {
@@ -331,8 +309,6 @@
           transform: translateY(10px) rotate(-120deg);
         }
       }
-
-      /* Astronaut */
       .astronaut-wrap {
         position: absolute;
         bottom: 285px;
@@ -350,8 +326,6 @@
           transform: translateX(60px) translateY(-18px) rotate(5deg);
         }
       }
-
-      /* Click to explore */
       .cta-explore {
         position: absolute;
         bottom: 180px;
@@ -384,7 +358,6 @@
         background: rgba(56, 189, 248, 0.1);
       }
 
-      /* Hero layout */
       .hero-layout {
         position: relative;
         z-index: 10;
@@ -416,8 +389,6 @@
           justify-content: center;
         }
       }
-
-      /* Hero text */
       .hero-text {
         position: relative;
         z-index: 10;
@@ -432,8 +403,6 @@
           justify-content: center !important;
         }
       }
-
-      /* Avatar */
       .hero-avatar-col {
         position: relative;
         flex-shrink: 0;
@@ -449,7 +418,6 @@
           height: 180px;
         }
       }
-      /* Outer rotating ring */
       .hero-avatar-ring::before {
         content: "";
         position: absolute;
@@ -471,7 +439,6 @@
           transform: rotate(360deg);
         }
       }
-      /* Inner mask to make ring hollow */
       .hero-avatar-ring::after {
         content: "";
         position: absolute;
@@ -496,7 +463,6 @@
         border-radius: 50%;
         display: block;
       }
-      /* Glow effect */
       .hero-avatar-glow {
         position: absolute;
         inset: -30px;
@@ -521,7 +487,6 @@
           transform: scale(1.08);
         }
       }
-      /* Floating orbit dots */
       .avatar-orbit {
         position: absolute;
         inset: -28px;
@@ -565,7 +530,6 @@
           transform: rotate(360deg);
         }
       }
-      /* Avatar float */
       .hero-avatar-wrap {
         position: relative;
         animation: avatarFloat 4s ease-in-out infinite;
@@ -579,7 +543,6 @@
           transform: translateY(-12px);
         }
       }
-      /* Status badge on avatar */
       .avatar-status {
         position: absolute;
         bottom: 8px;
@@ -608,7 +571,6 @@
         animation: pulse 2s infinite;
         flex-shrink: 0;
       }
-
       .hero-kicker {
         font-family: "Orbitron", monospace;
         font-size: 9.5px;
@@ -619,7 +581,7 @@
         margin-bottom: 16px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 14px;
       }
       .hero-kicker::before,
@@ -633,7 +595,6 @@
       .hero-kicker::after {
         transform: scaleX(-1);
       }
-
       .hero-name {
         font-family: "Orbitron", monospace;
         font-size: clamp(24px, 4.5vw, 52px);
@@ -656,11 +617,16 @@
         color: var(--accent2);
       }
       .hero-desc {
-        font-size: 14px;
+        font-size: 15px;
         color: var(--muted);
-        line-height: 1.8;
+        line-height: 1.9;
         max-width: 460px;
         margin: 0 0 26px;
+        font-weight: 400;
+      }
+      .hero-desc strong {
+        color: var(--text);
+        font-weight: 600;
       }
       @media (max-width: 820px) {
         .hero-desc {
@@ -691,10 +657,9 @@
       .hero-actions {
         display: flex;
         gap: 12px;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
       }
-
       .btn-primary {
         display: inline-flex;
         align-items: center;
@@ -812,7 +777,6 @@
       .about-text p strong {
         color: var(--text);
       }
-
       .skill-group-title {
         font-size: 11px;
         font-weight: 700;
@@ -864,6 +828,8 @@
         transition: all 0.25s;
         position: relative;
         overflow: hidden;
+        /* FIX: đảm bảo card không che các nút bên trong */
+        isolation: isolate;
       }
       .project-card::before {
         content: "";
@@ -875,6 +841,8 @@
         background: linear-gradient(90deg, var(--accent), var(--accent3));
         opacity: 0;
         transition: opacity 0.25s;
+        /* FIX: đặt pseudo-element phía sau nội dung */
+        z-index: -1;
       }
       .project-card::after {
         content: "";
@@ -887,6 +855,9 @@
         );
         opacity: 0;
         transition: opacity 0.3s;
+        /* FIX: đặt pseudo-element phía sau nội dung */
+        z-index: -1;
+        pointer-events: none;
       }
       .project-card:hover {
         border-color: rgba(108, 99, 255, 0.35);
@@ -947,6 +918,8 @@
         font-size: 11px;
         top: 2px;
       }
+
+      /* ===== FIX CHÍNH: Nút project-link ===== */
       .project-link {
         display: inline-flex;
         align-items: center;
@@ -959,12 +932,21 @@
         border-radius: 8px;
         transition: all 0.2s;
         box-shadow: 0 3px 12px rgba(108, 99, 255, 0.3);
+        cursor: pointer;
+        /* FIX: đảm bảo nút nằm trên cùng, có thể click được */
+        position: relative;
+        z-index: 10;
+        text-decoration: none;
+        /* FIX: ngăn overflow:hidden của card cắt mất pointer-events */
+        pointer-events: auto;
       }
       .project-link:hover {
         background: #7c74ff;
         box-shadow: 0 6px 20px rgba(108, 99, 255, 0.45);
         transform: translateY(-2px);
+        color: #fff;
       }
+      /* ===== END FIX ===== */
 
       /* BLOG */
       .blog-grid {
@@ -1121,6 +1103,7 @@
         border: 1px solid var(--border);
         background: rgba(255, 255, 255, 0.03);
         transition: all 0.15s;
+        cursor: pointer;
       }
       .cert-item:hover {
         border-color: rgba(108, 99, 255, 0.3);
@@ -1157,8 +1140,6 @@
           transform: translateY(0);
         }
       }
-
-      /* Scroll reveal */
       .reveal {
         opacity: 0;
         transform: translateY(30px);
@@ -1169,6 +1150,57 @@
       .reveal.visible {
         opacity: 1;
         transform: translateY(0);
+      }
+
+      /* MODAL blog */
+      .modal-content-body h3 {
+        color: #f0f0f5;
+        font-size: 19px;
+        margin: 32px 0 12px;
+        letter-spacing: -0.2px;
+      }
+      .modal-content-body p {
+        color: #8888aa;
+        font-size: 15px;
+        line-height: 1.9;
+        margin-bottom: 14px;
+      }
+      .modal-content-body strong {
+        color: #d0d0e8;
+        font-weight: 600;
+      }
+      .modal-content-body .highlight-box {
+        background: rgba(108, 99, 255, 0.08);
+        border-left: 3px solid var(--accent2);
+        border-radius: 0 8px 8px 0;
+        padding: 16px 20px;
+        margin: 20px 0;
+        font-size: 14px;
+        color: #a0a0c8;
+        line-height: 1.8;
+      }
+      .modal-content-body .highlight-box strong {
+        color: var(--accent2);
+      }
+      .modal-content-body .takeaway {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .modal-content-body .takeaway:first-child {
+        border-top: none;
+      }
+      .modal-content-body .takeaway-icon {
+        font-size: 16px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .modal-content-body .takeaway-text {
+        font-size: 14px;
+        color: #8888aa;
+        line-height: 1.75;
       }
     </style>
   </head>
@@ -1187,7 +1219,6 @@
       <div class="sky"></div>
       <canvas id="starCanvas"></canvas>
 
-      <!-- Nebulas -->
       <div
         class="neb"
         style="
@@ -1237,7 +1268,6 @@
         "
       ></div>
 
-      <!-- Shooting stars -->
       <div
         class="shoot"
         style="top: 8%; left: 15%; animation: shoot 3.5s linear infinite 0s"
@@ -1263,7 +1293,6 @@
         <span style="width: 70px"></span>
       </div>
 
-      <!-- Asteroids -->
       <div
         style="
           position: absolute;
@@ -1341,12 +1370,14 @@
             Sinh viên <span>Hệ thống Thông tin</span> — HUTECH 2022–2026
           </p>
           <p class="hero-desc">
-            Tôi không chọn BA vì ai gợi ý — tôi phát hiện ra khi làm project
-            thực tế. Thích phân tích hơn code, thích hiểu <em>tại sao</em> hơn
-            <em>như thế nào</em>.
+            Tôi không chọn BA vì ai gợi ý. Tôi phát hiện ra khi làm project thực
+            tế — khi nhận ra mình thích
+            <strong>phân tích bức tranh lớn</strong> hơn là fix bug, thích hỏi
+            <strong>tại sao cần tính năng này</strong> trước khi hỏi làm thế
+            nào.
           </p>
           <div class="hero-badge">
-            <span class="live"></span>Business Analyst Intern • Đang tìm kiếm cơ
+            <span class="live"></span>Business Analyst Intern · Đang tìm kiếm cơ
             hội
           </div>
           <div class="hero-actions">
@@ -1371,9 +1402,7 @@
                 />
               </div>
             </div>
-            <div class="avatar-orbit">
-              <div class="avatar-orbit-dot"></div>
-            </div>
+            <div class="avatar-orbit"><div class="avatar-orbit-dot"></div></div>
             <div class="avatar-orbit2">
               <div class="avatar-orbit2-dot"></div>
             </div>
@@ -1393,7 +1422,7 @@
         </div>
       </div>
 
-      <!-- Mountains SVG -->
+      <!-- Mountains -->
       <div class="mountains">
         <svg
           width="100%"
@@ -1401,19 +1430,16 @@
           preserveAspectRatio="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <!-- Back mountains (darker) -->
           <polygon
             points="0,200 0,120 80,60 160,100 240,40 340,90 420,30 520,80 600,20 700,70 780,10 880,65 960,15 1060,70 1140,25 1240,75 1320,35 1440,80 1440,200"
             fill="#07091e"
             opacity="0.9"
           />
-          <!-- Mid mountains -->
           <polygon
             points="0,200 0,150 60,110 140,140 200,90 280,120 360,70 440,110 520,60 600,100 680,50 760,95 840,55 920,100 1000,65 1080,105 1160,70 1240,110 1320,75 1440,120 1440,200"
             fill="#09102a"
             opacity="0.95"
           />
-          <!-- Front mountains -->
           <polygon
             points="0,200 0,170 50,150 100,165 170,130 240,155 310,125 380,150 460,120 540,148 610,125 680,150 760,128 840,155 920,135 1000,158 1070,138 1140,162 1220,145 1300,165 1380,148 1440,160 1440,200"
             fill="#060a1c"
@@ -1421,7 +1447,7 @@
         </svg>
       </div>
 
-      <!-- Astronaut SVG -->
+      <!-- Astronaut -->
       <div class="astronaut-wrap">
         <svg
           width="72"
@@ -1429,11 +1455,8 @@
           viewBox="0 0 72 88"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <!-- Body -->
           <ellipse cx="36" cy="54" rx="20" ry="24" fill="#d0d8f0" />
-          <!-- Helmet -->
           <circle cx="36" cy="28" r="18" fill="#e8edf8" />
-          <!-- Visor -->
           <ellipse
             cx="36"
             cy="28"
@@ -1443,7 +1466,6 @@
             opacity=".85"
           />
           <ellipse cx="33" cy="25" rx="4" ry="3" fill="rgba(255,255,255,.15)" />
-          <!-- Helmet highlight -->
           <ellipse
             cx="30"
             cy="22"
@@ -1452,7 +1474,6 @@
             fill="rgba(255,255,255,.25)"
             transform="rotate(-20 30 22)"
           />
-          <!-- Chest pack -->
           <rect x="28" y="44" width="16" height="12" rx="3" fill="#b0bcd8" />
           <rect
             x="31"
@@ -1472,7 +1493,6 @@
             fill="#34d399"
             opacity=".7"
           />
-          <!-- Arms -->
           <ellipse
             cx="16"
             cy="56"
@@ -1489,13 +1509,10 @@
             fill="#c8d4ec"
             transform="rotate(10 56 56)"
           />
-          <!-- Hands -->
           <circle cx="13" cy="68" r="5" fill="#b8c8e0" />
           <circle cx="59" cy="68" r="5" fill="#b8c8e0" />
-          <!-- Laptop in left hand -->
           <rect x="5" y="66" width="14" height="9" rx="2" fill="#1a1a3a" />
           <rect x="6" y="67" width="12" height="7" rx="1" fill="#0e2040" />
-          <!-- Screen glow on laptop -->
           <rect
             x="7"
             y="68"
@@ -1532,7 +1549,6 @@
             fill="#34d399"
             opacity=".5"
           />
-          <!-- Legs -->
           <ellipse
             cx="28"
             cy="76"
@@ -1549,10 +1565,8 @@
             fill="#b8c8e0"
             transform="rotate(-5 44 76)"
           />
-          <!-- Boots -->
           <ellipse cx="26" cy="85" rx="9" ry="4" fill="#8898b8" />
           <ellipse cx="46" cy="85" rx="9" ry="4" fill="#8898b8" />
-          <!-- Antenna -->
           <line
             x1="36"
             y1="10"
@@ -1566,7 +1580,6 @@
         </svg>
       </div>
 
-      <!-- CTA -->
       <div
         class="cta-explore"
         onclick="
@@ -1596,8 +1609,8 @@
             <p>
               Trong quá trình xây dựng hệ thống quản lý giao hàng, tôi nhận ra
               mình thích <strong>phân tích bức tranh lớn</strong> hơn là ngồi
-              fix bug. Thích hỏi <em>"tại sao cần tính năng này?"</em> trước khi
-              hỏi <em>"làm thế nào?"</em>
+              fix bug. Thích hỏi "tại sao cần tính năng này?" trước khi hỏi "làm
+              thế nào?"
             </p>
             <p>
               Tôi có nền tảng kỹ thuật (có thể code được) — giúp tôi
@@ -1618,33 +1631,33 @@
           <div class="reveal" style="transition-delay: 0.15s">
             <div class="skill-group-title">Phân tích nghiệp vụ</div>
             <div class="skill-tags">
-              <span class="skill-tag">BRD</span
-              ><span class="skill-tag">SRS</span
-              ><span class="skill-tag">User Story</span
-              ><span class="skill-tag">Use Case</span
-              ><span class="skill-tag">BPMN</span
-              ><span class="skill-tag">DFD</span
-              ><span class="skill-tag">ERD</span
-              ><span class="skill-tag">Sequence Diagram</span>
+              <span class="skill-tag">BRD</span>
+              <span class="skill-tag">SRS</span>
+              <span class="skill-tag">User Story</span>
+              <span class="skill-tag">Use Case</span>
+              <span class="skill-tag">BPMN</span>
+              <span class="skill-tag">DFD</span>
+              <span class="skill-tag">ERD</span>
+              <span class="skill-tag">Sequence Diagram</span>
             </div>
             <div class="skill-group-title">Lập trình & Kỹ thuật</div>
             <div class="skill-tags">
-              <span class="skill-tag">ASP.NET</span
-              ><span class="skill-tag">Flutter</span
-              ><span class="skill-tag">Python</span
-              ><span class="skill-tag">JavaScript</span
-              ><span class="skill-tag">SQL</span
-              ><span class="skill-tag">Firebase</span
-              ><span class="skill-tag">REST API</span
-              ><span class="skill-tag">Git</span>
+              <span class="skill-tag">ASP.NET</span>
+              <span class="skill-tag">Flutter</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">REST API</span>
+              <span class="skill-tag">Git</span>
             </div>
             <div class="skill-group-title">Công cụ</div>
             <div class="skill-tags">
-              <span class="skill-tag">Draw.io</span
-              ><span class="skill-tag">StarUML</span
-              ><span class="skill-tag">Lucidchart</span
-              ><span class="skill-tag">GitHub</span
-              ><span class="skill-tag">MS Office</span>
+              <span class="skill-tag">Draw.io</span>
+              <span class="skill-tag">StarUML</span>
+              <span class="skill-tag">Lucidchart</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">MS Office</span>
             </div>
           </div>
         </div>
@@ -1663,9 +1676,9 @@
         <div class="projects-grid">
           <div class="project-card reveal">
             <div class="project-stack">
-              <span class="stack-tag">ASP.NET</span
-              ><span class="stack-tag">MySQL</span
-              ><span class="stack-tag">MoMo API</span>
+              <span class="stack-tag">ASP.NET</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">MoMo API</span>
             </div>
             <div class="project-title">
               Hệ thống quản lý giao hàng trực tuyến
@@ -1694,18 +1707,28 @@
                 Viết test case có cấu trúc cho 8 nhóm chức năng + non-functional
               </li>
             </ul>
+            <!-- FIX: thêm onclick để mở link chắc chắn hoạt động -->
             <a
               href="https://drive.google.com/drive/folders/1jWUnJOW9StsMfodNIKeh8QAZxdJmU6q_?usp=drive_link"
               target="_blank"
+              rel="noopener noreferrer"
               class="project-link"
-              >📄 Xem báo cáo →</a
+              onclick="
+                window.open(
+                  'https://drive.google.com/drive/folders/1jWUnJOW9StsMfodNIKeh8QAZxdJmU6q_?usp=drive_link',
+                  '_blank',
+                );
+                return false;
+              "
             >
+              📄 Xem báo cáo →
+            </a>
           </div>
           <div class="project-card reveal" style="transition-delay: 0.15s">
             <div class="project-stack">
-              <span class="stack-tag">Flutter</span
-              ><span class="stack-tag">Firebase</span
-              ><span class="stack-tag">REST API</span>
+              <span class="stack-tag">Flutter</span>
+              <span class="stack-tag">Firebase</span>
+              <span class="stack-tag">REST API</span>
             </div>
             <div class="project-title">Ứng dụng đặt vé xem phim (Demo)</div>
             <div class="project-desc">
@@ -1727,12 +1750,22 @@
               </li>
               <li>Quản lý source code bằng GitHub</li>
             </ul>
+            <!-- FIX: thêm onclick để mở link chắc chắn hoạt động -->
             <a
               href="https://drive.google.com/drive/folders/1_RSZ_qgWVFSxKTGh69A4YQ8jxtI0l8u2?usp=drive_link"
               target="_blank"
+              rel="noopener noreferrer"
               class="project-link"
-              >▶ Xem demo →</a
+              onclick="
+                window.open(
+                  'https://drive.google.com/drive/folders/1_RSZ_qgWVFSxKTGh69A4YQ8jxtI0l8u2?usp=drive_link',
+                  '_blank',
+                );
+                return false;
+              "
             >
+              ▶ Xem demo →
+            </a>
           </div>
         </div>
       </div>
@@ -1749,19 +1782,18 @@
         </p>
         <div class="blog-grid">
           <div class="blog-card reveal" onclick="openPost(0)">
-            <div class="blog-meta">12/2025 · 5 phút đọc</div>
+            <div class="blog-meta">12/2025 · 7 phút đọc</div>
             <div class="blog-title">
               Làm project rồi mới biết mình hợp với BA
             </div>
             <div class="blog-excerpt">
-              Tôi không chọn BA vì đọc JD hay nghe ai giới thiệu. Tôi phát hiện
-              ra khi đang làm — khi nhận ra mình thích ngồi phân tích bức tranh
-              lớn hơn là ngồi fix bug.
+              Không ai dạy tôi chọn BA. Tôi tìm thấy nó ở giữa một đồ án — khi
+              nhận ra rằng phần tôi làm tốt nhất không phải là code.
             </div>
             <div class="blog-tags">
-              <span class="blog-tag">Business Analyst</span
-              ><span class="blog-tag">Hành trình</span
-              ><span class="blog-tag">Tự học</span>
+              <span class="blog-tag">Business Analyst</span>
+              <span class="blog-tag">Hành trình</span>
+              <span class="blog-tag">Tự học</span>
             </div>
             <div
               style="
@@ -1782,14 +1814,13 @@
             <div class="blog-meta">12/2025 · 6 phút đọc</div>
             <div class="blog-title">Từ bài toán giao hàng đến Flowchart</div>
             <div class="blog-excerpt">
-              Bài toán tối ưu tuyến đường nghe có vẻ kỹ thuật, nhưng phần khó
-              nhất không phải là code — là hiểu bài toán. Đây là cách tôi tiếp
-              cận nó.
+              Phần khó nhất của tối ưu tuyến đường không phải là thuật toán — là
+              hiểu đúng bài toán trước khi tìm lời giải.
             </div>
             <div class="blog-tags">
-              <span class="blog-tag">Phân tích</span
-              ><span class="blog-tag">Flowchart</span
-              ><span class="blog-tag">BPMN</span>
+              <span class="blog-tag">Phân tích</span>
+              <span class="blog-tag">Flowchart</span>
+              <span class="blog-tag">BPMN</span>
             </div>
             <div
               style="
@@ -1807,18 +1838,18 @@
             onclick="openPost(2)"
             style="transition-delay: 0.2s"
           >
-            <div class="blog-meta">12/2025 · 5 phút đọc</div>
+            <div class="blog-meta">12/2025 · 6 phút đọc</div>
             <div class="blog-title">
               BA là gì với tôi — sau một năm tự tìm hiểu
             </div>
             <div class="blog-excerpt">
-              Không phải định nghĩa từ sách giáo khoa. Đây là cách tôi hiểu BA
-              qua quá trình tự học, làm sai, và dần hình thành góc nhìn của
-              mình.
+              Định nghĩa trong sách không sai, nhưng cũng chưa đủ. Đây là góc
+              nhìn tôi xây dựng qua quá trình làm thực tế, tự học, và suy nghĩ
+              nghiêm túc.
             </div>
             <div class="blog-tags">
-              <span class="blog-tag">Business Analyst</span
-              ><span class="blog-tag">Góc nhìn cá nhân</span>
+              <span class="blog-tag">Business Analyst</span>
+              <span class="blog-tag">Góc nhìn cá nhân</span>
             </div>
             <div
               style="
@@ -1857,7 +1888,7 @@
           background: #1a1a24;
           border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 20px;
-          padding: 40px;
+          padding: 48px 44px;
           position: relative;
         "
         onclick="event.stopPropagation()"
@@ -1888,8 +1919,9 @@
           style="
             font-size: 12px;
             color: #8888aa;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-weight: 500;
+            letter-spacing: 0.05em;
           "
         ></div>
         <h2
@@ -1899,14 +1931,11 @@
             font-weight: 800;
             color: #f0f0f5;
             line-height: 1.3;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
             padding-right: 40px;
           "
         ></h2>
-        <div
-          id="modalContent"
-          style="font-size: 15px; line-height: 1.85; color: #8888aa"
-        ></div>
+        <div id="modalContent" class="modal-content-body"></div>
       </div>
     </div>
 
@@ -1982,34 +2011,35 @@
             >
               <div class="contact-icon">✉️</div>
               <div>
-                <span class="contact-label">Email</span
-                ><span class="contact-value">hoainam1872004@gmail.com</span>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">hoainam1872004@gmail.com</span>
               </div>
             </a>
             <div class="contact-item">
               <div class="contact-icon">📞</div>
               <div>
-                <span class="contact-label">Điện thoại</span
-                ><span class="contact-value">0941 969 269</span>
+                <span class="contact-label">Điện thoại</span>
+                <span class="contact-value">0941 969 269</span>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">📍</div>
               <div>
-                <span class="contact-label">Địa chỉ</span
-                ><span class="contact-value">Thủ Đức, TP. Hồ Chí Minh</span>
+                <span class="contact-label">Địa chỉ</span>
+                <span class="contact-value">Thủ Đức, TP. Hồ Chí Minh</span>
               </div>
             </div>
             <a
               href="https://linkedin.com/in/namnguyen1872004"
               target="_blank"
+              rel="noopener noreferrer"
               class="contact-item"
               style="display: flex"
             >
               <div class="contact-icon">🔗</div>
               <div>
-                <span class="contact-label">LinkedIn</span
-                ><span class="contact-value">namnguyen1872004</span>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">namnguyen1872004</span>
               </div>
             </a>
           </div>
@@ -2018,11 +2048,7 @@
               Chứng chỉ
             </div>
             <div class="cert-list">
-              <div
-                class="cert-item"
-                onclick="openCert('assets/images/3.jpg')"
-                style="cursor: pointer"
-              >
+              <div class="cert-item" onclick="openCert('assets/images/3.jpg')">
                 <div class="cert-name">Networking Basics</div>
                 <div class="cert-issuer">Cisco Networking Academy</div>
                 <div
@@ -2036,11 +2062,7 @@
                   Xem chứng chỉ →
                 </div>
               </div>
-              <div
-                class="cert-item"
-                onclick="openCert('assets/images/1.jpg')"
-                style="cursor: pointer"
-              >
+              <div class="cert-item" onclick="openCert('assets/images/1.jpg')">
                 <div class="cert-name">JavaScript Essentials 1</div>
                 <div class="cert-issuer">
                   Cisco Networking Academy & JS Institute
@@ -2056,11 +2078,7 @@
                   Xem chứng chỉ →
                 </div>
               </div>
-              <div
-                class="cert-item"
-                onclick="openCert('assets/images/2.jpg')"
-                style="cursor: pointer"
-              >
+              <div class="cert-item" onclick="openCert('assets/images/2.jpg')">
                 <div class="cert-name">JavaScript Essentials 2</div>
                 <div class="cert-issuer">
                   Cisco Networking Academy & JS Institute
@@ -2091,8 +2109,8 @@
     <script>
       /* STARS */
       (function () {
-        const c = document.getElementById("starCanvas");
-        const ctx = c.getContext("2d");
+        const c = document.getElementById("starCanvas"),
+          ctx = c.getContext("2d");
         let W,
           H,
           stars = [];
@@ -2104,7 +2122,7 @@
           resize();
           stars = [];
           const N = Math.floor((W * H) / 2500);
-          for (let i = 0; i < N; i++) {
+          for (let i = 0; i < N; i++)
             stars.push({
               x: Math.random() * W,
               y: Math.random() * H * 0.7,
@@ -2119,7 +2137,6 @@
                     ? "167,139,250"
                     : "56,189,248",
             });
-          }
         }
         let t = 0;
         function draw() {
@@ -2143,9 +2160,7 @@
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-            }
+            if (e.isIntersecting) e.target.classList.add("visible");
           });
         },
         { threshold: 0.1 },
@@ -2154,22 +2169,115 @@
         .querySelectorAll(".reveal")
         .forEach((el) => observer.observe(el));
 
-      /* BLOG */
+      /* BLOG POSTS */
       const posts = [
         {
           title: "Làm project rồi mới biết mình hợp với BA",
-          meta: "12/2025 · 5 phút đọc · Business Analyst, Hành trình, Tự học",
-          content: `<p>Khi bắt đầu làm đồ án chuyên ngành về hệ thống quản lý giao hàng, tôi nghĩ mình sẽ tập trung vào code — ASP.NET, MySQL, tích hợp API.</p><p>Nhưng có một giai đoạn trước khi bắt tay vào code, nhóm tôi phải ngồi phân tích: hệ thống này cần làm gì? Ai dùng? Tôi bắt đầu vẽ Use Case. Rồi BPMN, DFD, ERD. Và tôi nhận ra — phần này tôi thích hơn.</p><h3 style="color:#f0f0f5;font-size:18px;margin:28px 0 10px">Không phải vì code khó</h3><p>Code là trả lời câu hỏi <strong style="color:#f0f0f5">How</strong>. BA là trả lời câu hỏi <strong style="color:#f0f0f5">What và Why</strong>. Tôi thích bắt đầu từ câu hỏi thứ hai.</p><h3 style="color:#f0f0f5;font-size:18px;margin:28px 0 10px">Điều tôi học được</h3><p>Khi làm khảo sát người dùng (50+ phiếu), tôi học cách đặt câu hỏi đúng. Khi vẽ BPMN, tôi học cách nhìn quy trình như chuỗi quyết định. Từ một project học thuật, tôi biết được mình thích loại công việc nào.</p>`,
+          meta: "12/2025 · 7 phút đọc · Business Analyst, Hành trình, Tự học",
+          content: `
+            <p>Hầu hết mọi người chọn ngành theo một trong ba cách: nghe lời bố mẹ, đọc JD thấy lương cao, hoặc nghe bạn bè giới thiệu. Tôi không thuộc nhóm nào cả. Tôi tìm thấy BA ở giữa một đồ án — khi dự án đang chạy, deadline đang đến, và tôi nhận ra rằng phần tôi làm tốt nhất không phải là code.</p>
+
+            <h3>Điểm bắt đầu: một hệ thống quản lý giao hàng</h3>
+            <p>Khi nhóm bắt đầu dự án, mọi người mặc định phân vai theo năng lực kỹ thuật — ai code tốt nhất thì dẫn phần backend, ai biết design thì lo giao diện. Tôi thuộc nhóm "làm được nhiều thứ nhưng không xuất sắc cái nào", nên tôi được giao phần mà chưa ai muốn nhận: <strong>phân tích yêu cầu và viết tài liệu</strong>.</p>
+            <p>Thay vì xem đó là việc phụ, tôi bắt đầu nghiêm túc với nó. Tôi thiết kế bảng khảo sát, thu thập hơn 50 phiếu phản hồi từ người dùng thực, sau đó ngồi phân tích từng pattern trong câu trả lời. 56% ưu tiên tốc độ giao hàng. 74% muốn có thanh toán online. Chỉ riêng hai con số đó đã định hình hoàn toàn danh sách tính năng của hệ thống.</p>
+
+            <div class="highlight-box">
+              <strong>Insight quan trọng:</strong> Trước khi có dữ liệu khảo sát, nhóm tôi định ưu tiên tính năng quản lý kho hàng. Sau khi phân tích, chúng tôi mới biết đó không phải điều người dùng cần nhất. Một quyết định dựa trên dữ liệu, không phải cảm tính.
+            </div>
+
+            <h3>Khi tôi vẽ Use Case đầu tiên</h3>
+            <p>Lần đầu vẽ Use Case Diagram, tôi mất hơn một tiếng chỉ để xác định ai là actor trong hệ thống. Tài xế giao hàng là actor. Khách hàng là actor. Nhưng quản lý kho thì sao — họ dùng hệ thống khác, có liên quan không? Câu hỏi tưởng đơn giản nhưng nếu trả lời sai, phạm vi dự án sẽ bị vẽ lệch ngay từ đầu.</p>
+            <p>Sau đó là BPMN, rồi DFD, rồi ERD. Mỗi loại sơ đồ giải quyết một khía cạnh khác nhau của cùng một hệ thống: BPMN cho quy trình nghiệp vụ, DFD cho luồng dữ liệu, ERD cho cấu trúc lưu trữ. Học cách chọn đúng công cụ cho đúng vấn đề — đó là một trong những kỹ năng quan trọng nhất tôi có được từ dự án này.</p>
+
+            <h3>Điều tôi thực sự học được</h3>
+            <div class="takeaway">
+              <span class="takeaway-icon">🎯</span>
+              <span class="takeaway-text"><strong>BA không phải "viết tài liệu cho đẹp"</strong> — đó là quá trình liên tục đặt câu hỏi đúng để đảm bảo team đang xây đúng thứ cần xây.</span>
+            </div>
+            <div class="takeaway">
+              <span class="takeaway-icon">🔍</span>
+              <span class="takeaway-text"><strong>Kỹ năng kỹ thuật là lợi thế, không phải rào cản</strong> — khi tôi hiểu code, tôi dễ dàng đánh giá feasibility của yêu cầu và trao đổi trực tiếp với dev mà không cần trung gian.</span>
+            </div>
+            <div class="takeaway">
+              <span class="takeaway-icon">💡</span>
+              <span class="takeaway-text"><strong>Sự mơ hồ là bình thường</strong> — stakeholder thường không biết mình muốn gì cho đến khi được hỏi đúng câu hỏi. Nhiệm vụ của BA là giúp họ làm rõ điều đó.</span>
+            </div>
+            <p style="margin-top:20px">Tôi vẫn còn rất nhiều thứ phải học. Nhưng khi nhìn lại, tôi biết mình đang đi đúng hướng — không phải vì ai nói, mà vì tôi tự cảm nhận được.</p>
+          `,
         },
         {
           title: "Từ bài toán giao hàng đến Flowchart",
           meta: "12/2025 · 6 phút đọc · Phân tích, Flowchart, BPMN",
-          content: `<p>Trong dự án hệ thống quản lý giao hàng, có một tính năng mà tôi phải ngồi nghĩ rất lâu: <strong style="color:#f0f0f5">gợi ý tuyến đường tối ưu cho tài xế khi giao nhiều đơn</strong>.</p><h3 style="color:#f0f0f5;font-size:18px;margin:28px 0 10px">Bắt đầu bằng câu hỏi</h3><p>Sai lầm đầu tiên tôi suýt mắc là mở Google tìm ngay thuật toán. Tôi bắt đầu bằng cách hỏi: Tài xế đang gặp vấn đề gì? Ràng buộc nào? Kết quả kỳ vọng là gì?</p><h3 style="color:#f0f0f5;font-size:18px;margin:28px 0 10px">Thuật toán tôi chọn</h3><p>Tôi chọn <strong style="color:#f0f0f5">Nearest Neighbor</strong>. Không tối ưu nhất — nhưng đủ tốt và dễ giải thích. Trong BA, <strong style="color:#f0f0f5">giải pháp "đủ tốt và có thể giải thích" thường tốt hơn "tối ưu nhất nhưng không ai hiểu"</strong>.</p>`,
+          content: `
+            <p>Trong dự án hệ thống quản lý giao hàng, có một tính năng mà tôi phải dừng lại suy nghĩ rất lâu: <strong>gợi ý tuyến đường tối ưu khi tài xế cần giao nhiều đơn cùng lúc.</strong> Nghe có vẻ đơn giản. Nhưng càng nghĩ sâu, bài toán càng phức tạp hơn tưởng.</p>
+
+            <h3>Sai lầm đầu tiên: tìm giải pháp trước khi hiểu bài toán</h3>
+            <p>Phản xạ đầu tiên của tôi là mở Google tìm "route optimization algorithm". Kết quả trả về: Dijkstra, A*, Travelling Salesman Problem, Google Maps API... Tôi bắt đầu đọc các thuật toán mà chưa biết rõ mình đang giải quyết vấn đề gì.</p>
+            <p>Sau một hồi, tôi dừng lại và tự hỏi theo cách khác hơn: <strong>Tài xế đang gặp vấn đề cụ thể gì? Ràng buộc nào tồn tại trong thực tế? Định nghĩa "tối ưu" là gì — thời gian, quãng đường, hay chi phí nhiên liệu?</strong></p>
+
+            <div class="highlight-box">
+              Câu hỏi đúng dẫn đến bài toán đúng. Bài toán đúng mới dẫn đến giải pháp phù hợp. Đây là nguyên tắc mà tôi học được — không phải từ sách, mà từ lần bị "kẹt" giữa dự án.
+            </div>
+
+            <h3>Phác thảo bài toán bằng ngôn ngữ nghiệp vụ</h3>
+            <p>Thay vì nghĩ bằng thuật toán, tôi bắt đầu bằng BPMN — vẽ quy trình thực tế của tài xế: nhận danh sách đơn hàng → xem địa chỉ → lên kế hoạch lộ trình → xuất phát → giao lần lượt → xác nhận hoàn thành.</p>
+            <p>Từ flowchart đó, tôi nhận ra một điều quan trọng: tài xế không cần lộ trình "tối ưu tuyệt đối" — họ cần lộ trình <strong>tốt đủ và có thể hiểu được</strong>. Một tuyến đường phức tạp tối ưu 5% nhưng khó theo dõi còn tệ hơn một tuyến đường đơn giản, dễ nhớ, và chỉ tệ hơn 5%.</p>
+
+            <h3>Tại sao tôi chọn Nearest Neighbor</h3>
+            <p>Tôi đề xuất thuật toán <strong>Nearest Neighbor</strong>: từ vị trí hiện tại, luôn di chuyển đến điểm giao hàng gần nhất chưa được giao. Không phải thuật toán tốt nhất về mặt lý thuyết — nhưng đáp ứng đầy đủ ba tiêu chí thực tế:</p>
+            <div class="takeaway">
+              <span class="takeaway-icon">✓</span>
+              <span class="takeaway-text"><strong>Đơn giản để implement</strong> — team dev có thể viết trong một buổi, không cần thư viện bên ngoài.</span>
+            </div>
+            <div class="takeaway">
+              <span class="takeaway-icon">✓</span>
+              <span class="takeaway-text"><strong>Dễ giải thích</strong> — tài xế hiểu được logic, có thể override thủ công khi cần.</span>
+            </div>
+            <div class="takeaway">
+              <span class="takeaway-icon">✓</span>
+              <span class="takeaway-text"><strong>Đủ tốt cho scope hiện tại</strong> — với số lượng đơn mỗi tuyến không quá lớn, độ lệch so với optimal không đáng kể.</span>
+            </div>
+
+            <h3>Bài học lớn hơn về phân tích</h3>
+            <p>Phân tích không phải là tìm giải pháp hoàn hảo — đó là tìm giải pháp phù hợp nhất với bối cảnh hiện tại. Đôi khi giải pháp "đủ tốt" lại tốt hơn giải pháp "tối ưu" vì nó đơn giản hơn, ít rủi ro hơn, và dễ maintain hơn. Đây là góc nhìn tôi xây dựng được từ một tính năng tưởng chừng nhỏ trong một dự án học thuật.</p>
+          `,
         },
         {
           title: "BA là gì với tôi — sau một năm tự tìm hiểu",
-          meta: "12/2025 · 5 phút đọc · Business Analyst, Góc nhìn cá nhân",
-          content: `<p>Lần đầu nghe đến Business Analyst, tôi nghĩ đó là người viết tài liệu. Rồi là người cầu nối. Rồi là người phân tích dữ liệu. Tất cả không sai — nhưng không đủ.</p><h3 style="color:#f0f0f5;font-size:18px;margin:28px 0 10px">Làm project mới hiểu</h3><p>Tôi hiểu tại sao cần User Story — không phải để nộp báo cáo, mà để <strong style="color:#f0f0f5">có một nguồn sự thật chung</strong> mà cả nhóm đồng ý.</p><h3 style="color:#f0f0f5;font-size:18px;margin:28px 0 10px">BA với tôi bây giờ</h3><p>BA là người hiểu vấn đề đủ sâu để giúp team <strong style="color:#f0f0f5">giải quyết đúng thứ</strong>. Tôi chưa đi làm thực tế — nhưng đủ để bắt đầu.</p>`,
+          meta: "12/2025 · 6 phút đọc · Business Analyst, Góc nhìn cá nhân",
+          content: `
+            <p>Nếu tra Google "Business Analyst là gì", bạn sẽ nhận được vài chục định nghĩa na ná nhau: cầu nối giữa business và IT, người phân tích yêu cầu, người viết tài liệu... Tất cả đều đúng. Nhưng sau một năm tự học và thực hành trong dự án, tôi nhận ra những định nghĩa đó không sai — chúng chỉ không đủ.</p>
+
+            <h3>Hiểu lầm đầu tiên: BA chủ yếu viết tài liệu</h3>
+            <p>Khi bắt đầu tìm hiểu về BA, tôi nghĩ công việc chính là viết BRD, SRS, User Story, rồi chuyển cho dev. Một loại "phiên dịch viên" chuyển ngôn ngữ business sang ngôn ngữ kỹ thuật.</p>
+            <p>Nhận thức đó thay đổi khi tôi thực sự làm. Trong quá trình xây dựng hệ thống giao hàng, tôi nhận ra rằng tài liệu chỉ là <strong>kết quả của quá trình tư duy</strong> — không phải mục tiêu. Trước khi viết một dòng User Story nào, tôi phải trả lời được: đây là vấn đề gì, của ai, tại sao cần giải quyết, và giải quyết theo cách nào là hợp lý nhất với nguồn lực hiện có?</p>
+
+            <div class="highlight-box">
+              <strong>Tài liệu tốt = tư duy rõ ràng được viết ra.</strong> Nếu tư duy còn mơ hồ, viết thêm bao nhiêu trang cũng không giúp được gì.
+            </div>
+
+            <h3>Điều tôi học được từ khảo sát người dùng</h3>
+            <p>Tôi thu thập hơn 50 phiếu khảo sát cho dự án giao hàng. Kết quả thú vị nhất không phải là con số — mà là <strong>sự khác biệt giữa điều người dùng nói và điều họ thực sự cần.</strong></p>
+            <p>Một số người dùng nói muốn "giao diện đẹp hơn". Nhưng khi hỏi sâu hơn, điều họ thực sự không hài lòng là thời gian load chậm — không phải visual design. Nếu tôi chỉ đọc câu trả lời bề mặt, nhóm sẽ mất thời gian cải thiện UI thay vì tối ưu performance.</p>
+            <p>Đây là kỹ năng tôi đang cố gắng xây dựng: <strong>phân biệt giữa "stated needs" và "real needs"</strong> — điều người ta nói họ muốn, và điều thực sự sẽ giải quyết được vấn đề của họ.</p>
+
+            <h3>BA với tôi bây giờ</h3>
+            <p>Sau tất cả, đây là cách tôi tự định nghĩa BA — không phải từ sách, mà từ những gì tôi trải qua:</p>
+            <div class="takeaway">
+              <span class="takeaway-icon">🧩</span>
+              <span class="takeaway-text">BA là người <strong>hiểu vấn đề đủ sâu</strong> để giúp team xác định đúng thứ cần xây — không phải chỉ xây đúng cách.</span>
+            </div>
+            <div class="takeaway">
+              <span class="takeaway-icon">🗣️</span>
+              <span class="takeaway-text">BA là người <strong>dịch hai chiều</strong> — không chỉ từ business sang tech, mà còn từ tech sang business, đảm bảo cả hai bên hiểu nhau thực sự.</span>
+            </div>
+            <div class="takeaway">
+              <span class="takeaway-icon">⚖️</span>
+              <span class="takeaway-text">BA là người <strong>quản lý sự đánh đổi</strong> — mỗi quyết định đều có chi phí, và BA giúp stakeholder hiểu rõ họ đang đánh đổi cái gì để được cái gì.</span>
+            </div>
+
+            <p style="margin-top:20px">Tôi chưa đi làm chính thức. Góc nhìn của tôi chắc chắn còn thiếu sót và sẽ tiếp tục thay đổi khi va chạm thực tế. Nhưng đây là nền tảng tôi xây dựng được — và tôi tin nó đủ vững để bắt đầu.</p>
+          `,
         },
       ];
 
@@ -2192,7 +2300,8 @@
       }
       function openCert(src) {
         document.getElementById("certImg").src = src;
-        document.getElementById("certModal").style.display = "flex";
+        const m = document.getElementById("certModal");
+        m.style.display = "flex";
         document.body.style.overflow = "hidden";
       }
       function closeCert() {
